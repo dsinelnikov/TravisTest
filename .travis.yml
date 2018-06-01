@@ -6,14 +6,26 @@ node_js:
 install:
   - yarn install
 
+env:
+  global:
+    - PDAPI=https://api.pagerduty.com
+    - PD_VSTS_VERSION=0.1.$TRAVIS_BUILD_NUMBER
+    - PD_VSTS_HOOK_URL=https://app.pagerduty.com/vsts/incidents/update?api_key\={{{apikey}}}
+
+matrix:
+  include:
+    - env: PD_VSTS_PUBLISHER=Denis_Release RELEASE=false
+    - env: PD_VSTS_PUBLISHER=Denis_Staging RELEASE=true
+
 script:
   - bin/build.sh
-  - bin/deploy.sh
+  - if [[ "$RELEASE" = 'true' && "$TRAVIS_PULL_REQUEST" == 'false' ]] bin/deploy.sh
 
 branches:
   only:
     - master
     - testrep
+
 
 # addons:
 #   artifacts:

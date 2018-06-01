@@ -1,1 +1,1 @@
-echo "Build package for $PD_VSTS_PUBLISHER; Version: $PD_VSTS_VERSION; Is pull request: $TRAVIS_PULL_REQUEST"
+echo "Build package for $PD_VSTS_PUBLISHER; Version: $TRAVIS_BUILD_NUMBER; Is pull request: $TRAVIS_PULL_REQUEST; Api: $PDAPI"
