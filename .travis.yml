@@ -14,8 +14,8 @@ env:
 
 matrix:
   include:
-    - env: PD_VSTS_PUBLISHER=Denis_Release RELEASE=false
-    - env: PD_VSTS_PUBLISHER=Denis_Staging RELEASE=true
+    - env: PD_VSTS_PUBLISHER=Denis_Release PD_GALLERY_FLAGS= RELEASE=false
+    - env: PD_VSTS_PUBLISHER=Denis_Staging PD_GALLERY_FLAGS=''"Preview", "Public"' RELEASE=true
 
 script:
   - bin/build.sh
