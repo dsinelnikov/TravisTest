@@ -12,6 +12,7 @@ script:
 branches:
   only:
     - master
+    - testrep
 
 addons:
   artifacts:
