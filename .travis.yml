@@ -19,7 +19,7 @@ matrix:
 
 script:
   - bin/build.sh
-  - if [[ "$RELEASE" = 'true' && "$TRAVIS_PULL_REQUEST" == 'false' ]] bin/deploy.sh
+  - if [[ "$RELEASE" = 'true' && "$TRAVIS_PULL_REQUEST" == 'false' ]]; then bin/deploy.sh
 
 branches:
   only:
