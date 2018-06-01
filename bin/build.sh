@@ -1,4 +1,1 @@
-PD_VSTS_PUBLISHER=pagerduty-staging
-
-bin/set_env_vars.js
-# npx webpack --mode=production --display-modules
+echo "Build package for $PD_VSTS_PUBLISHER; Version: $PD_VSTS_VERSION; Is pull request: $TRAVIS_PULL_REQUEST"
