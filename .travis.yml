@@ -14,7 +14,7 @@ branches:
     - master
     - testrep
 
-addons:
-  artifacts:
-    paths:
-      - $PD_VSTS_PUBLISHER.pagerduty-latest.vsix
+# addons:
+#   artifacts:
+#     paths:
+#       - $PD_VSTS_PUBLISHER.pagerduty-latest.vsix
